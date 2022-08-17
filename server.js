@@ -13,7 +13,7 @@ const config = {
         secure: false,
     },
     mail: {
-        subject: 'Your Purchase Details'
+        subject: 'Your Purchase Detail'
     }
 }
 
