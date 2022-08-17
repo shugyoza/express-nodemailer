@@ -38,6 +38,7 @@ example.env		package-lock.json	server.js
 terminal-moniker-10%
 ```
 
+- Open your IDE / Code Editor, e.g. `Visual Studio Code` in this `express-nodemailer` directory;
 - You need to create a file named: `.env` in the `express-nodemailer` directory by copying from file named `example.env` and change the variable values with email address and password for that email address. Detail as follows:
 - Replace the `youremailaddress@emailprovider.com` with your own email address
 - DO NOT use your original password! Instead, you have to use the Google generated password by following these steps:
@@ -58,3 +59,26 @@ terminal-moniker-10%
   - Type `expressnodemailer` in the given field (or any other name you want to for your own reference);
   - Copy the yellow-highlighted 16 (sixteen) digits password in the pop-up dialog;
 - Paste the copied 16 (sixteen) digits password to replace the `sixteencharspass`.
+- In this `express-nodemailer` directory, type in your terminal: `npm start`
+
+```
+terminal-moniker-10% npm start
+
+> express-nodemailer@1.0.0 start
+> node server.js
+
+Server is listening on port 3000
+```
+
+- When you see the above in your terminal, it means the app is ready to send an email if you send an HTTP POST request to `http://localhost:3000/sendmail`, provided you defined the request body;
+- If you are sending the request from Postman or your front-end application, you have to include a request body as follows:
+
+```
+{
+    "name": "your name",
+    "email": "emailAddressThatWillReceiveThis@email.com",
+    "content": "Input here any text you want to write as the content of the email"
+}
+```
+
+- This application has been initially developed to support this front-end application developed in this repository: https://github.com/shugyoza/plasma.git
