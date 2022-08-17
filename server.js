@@ -32,7 +32,7 @@ app.listen(PORT, () => {
 
 app.get('/', (req, res) => {
     try {
-        res.status(200).send(`Server is ready to accept HTTP POST request to path: '/sendmail`)
+        res.status(200).send(`Server is ready to accept HTTP POST request to path: '/sendmail'`)
     } catch (err) {
         console.error(err);
     }
