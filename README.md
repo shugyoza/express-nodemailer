@@ -1,5 +1,9 @@
 # express-nodemailer
 
+Log:
+
+- This project was started on Aug 16, 2022 and ready to use on Aug 17, 2022 for endpoint `/sendmail` to be consumed by angular front-end application developed in this repo: https://github.com/shugyoza/plasma.git
+
 ## SETUP IN LOCAL SERVER (LOCAL COMPUTER USE ONLY)
 
 The process to setup the app in the computer terminal is as follows:
