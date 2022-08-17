@@ -30,6 +30,12 @@ app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
 });
 
+app.get('/*', (req, res) => {
+    try {
+        res.status(200).send(`Server is ready to accept HTTP POST request to path: '/sendmail`)
+    }
+})
+
 // define a sendmail endpoint, which will send emails and response with the corresponding status
 app.post('/sendmail', (req, res) => {
     try {
