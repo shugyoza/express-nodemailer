@@ -33,10 +33,10 @@ app.listen(PORT, () => {
 // define a sendmail endpoint, which will send emails and response with the corresponding status
 app.post('/sendmail', (req, res) => {
     try {
-        console.log('incoming request');
         const reqBody = req.body;
+        console.log(`incoming request for sending to ${reqBody.email}`);
         sendMail(reqBody, (info) => {
-            console.log('Email sent');
+            console.log(`Email sent to ${reqBody.email}`);
             res.status(200).send(info);
         })
     } catch (err) {
